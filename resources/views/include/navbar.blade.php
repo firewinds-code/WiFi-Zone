@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        {{-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                             data-accordion="false">
                             <li class="nav-item">
                                 <a href="{{ route('payment') }}" class="nav-link">
@@ -56,7 +56,7 @@
                                     <p>subs</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> --}}
                         {{-- @if (Auth::user()->usertype == 1)
                             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                                 data-accordion="false">

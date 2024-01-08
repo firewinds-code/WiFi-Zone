@@ -9,14 +9,31 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div class="mt-4">
-                <x-label for="first_name" value="{{ __('First Name') }}" />
-                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')"
-                    required autofocus autocomplete="first_name" />
+                <x-label for="user_name" value="{{ __('User Name') }}" />
+                <x-input id="user_name" class="block mt-1 w-full" type="text" name="user_name" :value="old('user_name')" required
+                    autofocus autocomplete="user_name" />
             </div>
             <div class="mt-4">
-                <x-label for="last_name" value="{{ __('Last Name') }}" />
-                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')"
-                    required autofocus autocomplete="last_name" />
+                <x-label for="name" value="{{ __('Full Name') }}" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                    required autofocus autocomplete="name" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="gender" value="{{ __('Gender') }}" class="mt-4" />
+                <select id="gender" name="gender" class="block mt-1 w-full" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="mt-4">
+                <x-label for="location" value="{{ __('Location') }}" class="mt-4" />
+                <select id="location" name="location" class="block mt-1 w-full" required>
+                    <option value="">Select Location</option>
+                    {!! generateLocationOptions() !!}
+                </select>
             </div>
 
             <div class="mt-4">
